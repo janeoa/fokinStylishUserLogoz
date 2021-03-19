@@ -1,17 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import user_logo from './user_logo.jpg'
+
+
+class StylizedImage extends React.Component{
+    render() {
+        return(
+            <div>
+                <h1>INPUT</h1>
+                <img src={user_logo} alt="input" width="100px" />
+                <h1>OUTPUT</h1>
+                <canvas width="100" height="100">
+                    
+                </canvas>
+                <StylizedImageOption/>
+                <StylizedImageOption/>
+                <StylizedImageOption/>
+            </div>
+        )
+    }
+}
+
+class StylizedImageOption extends React.Component{
+    render(){
+        return(
+            <button>1</button>
+        )
+    }
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StylizedImage />,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
